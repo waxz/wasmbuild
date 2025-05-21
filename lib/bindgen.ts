@@ -51,7 +51,7 @@ async function generateForSelfBuild(filePath: Path): Promise<BindgenOutput> {
   const p = new Deno.Command("wasm-bindgen", {
     args: [
       "--target",
-      "bundler",
+      "web", // "bundler",
       "--out-dir",
       tempDir.toString(),
       filePath.toString(),
